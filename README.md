@@ -13,14 +13,14 @@ How to create a Cloudflare Worker to log HTTP page requests to R2 for analysis
 2. Generate an R2 API Token:
 	- Go to the **API Tokens** page in your Cloudflare dashboard.
 	- Create a new API token with **R2 Storage - Edit** permissions for the specific bucket.
-#### Step 2: Install and deploy the Cloudflare [[worker.js]] file
+#### Step 2: Install and deploy the Cloudflare [worker.js](worker.js) file
 
-The [[worker.js]] script will extract the required fields from the HTTP requests, write them to the R2 bucket and direct the client to the requested URL.
+The [worker.js](worker.js) script will extract the required fields from the HTTP requests, write them to the R2 bucket and direct the client to the requested URL.
 
 #### Step 3: Deploy the Worker
 
 1. Go to **Workers** in the Cloudflare dashboard.
-2. Create a new Worker and paste the [[worker.js]] script.
+2. Create a new Worker and paste the [worker.js](worker.js) script.
 3. Bind the R2 bucket to the Worker: 
   - In the Worker settings, add an **R2 binding**.
 	- Name the binding (e.g., R2_BUCKET).
@@ -35,7 +35,7 @@ The [[worker.js]] script will extract the required fields from the HTTP requests
 	- Go to the **R2** section in your Cloudflare dashboard.
 	- Look for the newly created log files.
 
-#### Key Changes:
+#### Key Features:
 1. Preserving Client Behavior:
 	- The fetch(request) call ensures the client gets the exact response they would normally receive when making the request (e.g., loading the requested page). This way, the Worker logs the data but doesn’t interfere with the client’s browsing experience.
 2. Minimal Output:
