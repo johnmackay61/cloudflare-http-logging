@@ -30,7 +30,7 @@ The [worker.js](worker.js) script will extract the required fields from the HTTP
 
 #### Step 4: Test the Setup
 
-1. Visit your domain (https://johnmackay.net) or make HTTP requests to it.
+1. Visit your domain (https://YOURDOMAIN.tld) or make HTTP requests to it.
 2. Check the R2 bucket:
 	- Go to the **R2** section in your Cloudflare dashboard.
 	- Look for the newly created log files.
