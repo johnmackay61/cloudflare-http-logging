@@ -35,6 +35,9 @@ The [worker.js](worker.js) script will extract the required fields from the HTTP
 	- Go to the **R2** section in your Cloudflare dashboard.
 	- Look for the newly created log files.
 
+#### Credits
+Thank you to ChatGPT for helping me formulate the process and code for this Worker.
+
 #### Key Features:
 1. Preserving Client Behavior:
 	- The fetch(request) call ensures the client gets the exact response they would normally receive when making the request (e.g., loading the requested page). This way, the Worker logs the data but doesn’t interfere with the client’s browsing experience.
