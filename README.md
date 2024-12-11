@@ -22,7 +22,7 @@ The [worker.js](worker.js) script will extract the required fields from the HTTP
 1. Go to **Workers** in the Cloudflare dashboard.
 2. Create a new Worker and paste the [worker.js](worker.js) script.
 3. Bind the R2 bucket to the Worker: 
-  - In the Worker settings, add an **R2 binding**.
+	- In the Worker settings, add an **R2 binding**.
 	- Name the binding (e.g., R2_BUCKET).
 	- Select the bucket you created earlier (http-requests-YOURDOMAIN).
 4. Assign the Worker to your domain:
